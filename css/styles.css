@@ -229,6 +229,28 @@ skillreview
 .learn-more-btn { background: rgba(61, 201, 179, 1); padding: 20px 40px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #fff; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #309383; -moz-box-shadow: 0px 3px 0px 0px #309383; box-shadow: 0px 3px 0px 0px #309383; margin: 60px 0 0; font-weight: bold; }
 .learn-more-btn:hover, .learn-more-btn:focus { background: rgba(61, 201, 179, 0.6); color: #fff; }
 h1.arrow { font-size: 15px; text-transform: uppercase; color: #353535; letter-spacing: 1px; background: url('../img/h1-bg.png') no-repeat center bottom; padding-bottom: 30px; font-weight: bold; }
+
+@import "compass/css3";
+
+* {
+  @include box-sizing(border-box); 
+}
+ 
+.come-in p {
+  transform: translateY(300px);
+  animation: come-in 2s ease forwards;
+}
+.come-in:nth-child(odd) p {
+  animation-duration: 10s;
+}
+.already-visible p {
+  transform: translateY(0);
+  animation: none;
+}
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
 /* ==========================================================================
 
 Intro
